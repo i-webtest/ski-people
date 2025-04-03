@@ -20,6 +20,8 @@
 
 body {
     position: relative;
+    display: flex;
+    flex-direction: column;
     overflow-x: hidden;
     min-width: 320px;
     min-height: 100vh;
@@ -27,8 +29,21 @@ body {
     font-weight: 400;
     font-size: 12px;
     line-height: 1.2;
-    // color: $text-color-black;
+    color: #1c1c1c;
     // background-color: $text-color-white;
+}
+
+main {
+    flex-grow: 1;
+    padding-bottom: 60px;
+
+    @include tablet {
+        padding-bottom: 80px;
+    }
+
+    @include laptop {
+        padding-bottom: 100px;
+    }
 }
 
 img,
@@ -81,18 +96,22 @@ iframe {
 
 .container {
     max-width: 1342px;
-    padding: 0 43px;
+    padding: 0 16px;
     margin: 0 auto;
-
-    @include laptop {
-        // padding: 0 40px;
-    }
 
     @include tablet {
         padding: 0 29px;
     }
 
-    @include mobile {
-        padding: 0 16px;
+    @include laptop {
+        padding: 0 43px;
     }
+
+    // @include mobile {
+    //     padding: 0 16px;
+    // }
+}
+
+input[type='search' i]::-webkit-search-cancel-button {
+    appearance: none;
 }
