@@ -2,5 +2,8 @@
 @use 'scss/base';
 @use 'scss/modules/header';
 @use 'scss/modules/catalog';
+@use 'scss/modules/breadcrumbs';
+@use 'scss/modules/goods';
+@use 'scss/modules/card';
 
 @import 'normalize.css';

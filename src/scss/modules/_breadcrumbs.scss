@@ -1,0 +1,41 @@
+.breadcrumbs {
+    padding-top: 28px;
+
+    &__navigation {
+    }
+
+    &__list {
+        display: flex;
+        gap: 6px;
+        color: #969eae;
+    }
+
+    &__item {
+        display: flex;
+        gap: 6px;
+
+        &::before {
+            content: '\003E';
+        }
+
+        &:first-child::before {
+            display: none;
+        }
+    }
+
+    &__link {
+        border-radius: 4px;
+        outline-offset: 4px;
+        outline: 1px solid transparent;
+
+        &:hover {
+            color: #0044f0;
+        }
+
+        &:focus-visible {
+            outline-color: #0044f0;
+        }
+    }
+}
+.container {
+}
