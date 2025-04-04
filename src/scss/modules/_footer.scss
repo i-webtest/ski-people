@@ -1,0 +1,149 @@
+@use '@scss/media' as *;
+@use '@scss/variables' as *;
+
+.footer {
+    background-color: #1c1c1c;
+    padding: 40px 0;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        @include tablet {
+            display: grid;
+            grid-template-areas:
+                '. logo .'
+                'developers contacts copyright';
+            grid-template-columns: 1fr 164px 1fr;
+            gap: 24px 0;
+        }
+
+        @include laptop {
+            grid-template-columns: 1fr 275px 1fr;
+        }
+    }
+
+    &__logo-link {
+        display: inline-block;
+        border-radius: 4px;
+        outline-offset: 4px;
+        outline: 1px solid transparent;
+
+        &:focus-visible {
+            outline-color: #0044f0;
+        }
+
+        @include tablet {
+            grid-area: logo;
+        }
+    }
+
+    &__logo-icon {
+        width: 164px;
+
+        @include laptop {
+            width: 275px;
+        }
+    }
+
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        @include tablet {
+            grid-area: contacts;
+            align-items: center;
+        }
+    }
+
+    &__contact {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: #fff;
+        border-radius: 4px;
+        outline-offset: 4px;
+        outline: 1px solid transparent;
+
+        &:focus-visible {
+            outline-color: #0044f0;
+        }
+
+        &:hover {
+            color: #0044f0;
+        }
+    }
+
+    &__contact-icon {
+    }
+
+    &__social-list {
+        display: flex;
+        gap: 13px;
+    }
+
+    &__social-item {
+    }
+
+    &__social-link {
+        display: block;
+        color: #fff;
+        border-radius: 4px;
+        outline-offset: 4px;
+        outline: 1px solid transparent;
+
+        &:focus-visible {
+            outline-color: #0044f0;
+        }
+
+        &:hover {
+            color: #0044f0;
+        }
+    }
+
+    &__developers-list {
+        color: #f1e9e4;
+
+        @include tablet {
+            grid-area: developers;
+            align-self: end;
+        }
+    }
+
+    &__developers-item {
+        margin-bottom: 8px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__developers-link {
+        border-radius: 4px;
+        outline-offset: 4px;
+        outline: 1px solid transparent;
+
+        &:focus-visible {
+            outline-color: #0044f0;
+        }
+
+        &:hover {
+            color: #0044f0;
+        }
+    }
+
+    &__link {
+    }
+
+    &__copyright {
+        color: #f1e9e4;
+
+        @include tablet {
+            grid-area: copyright;
+            justify-self: end;
+            align-self: end;
+        }
+    }
+}
