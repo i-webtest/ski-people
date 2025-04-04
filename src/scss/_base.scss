@@ -35,15 +35,6 @@ body {
 
 main {
     flex-grow: 1;
-    padding-bottom: 60px;
-
-    @include tablet {
-        padding-bottom: 80px;
-    }
-
-    @include laptop {
-        padding-bottom: 100px;
-    }
 }
 
 img,
@@ -83,6 +74,11 @@ p,
 figure,
 fieldset {
     margin: 0;
+}
+
+fieldset {
+    padding: 0;
+    border: none;
 }
 
 iframe {

@@ -1,0 +1,31 @@
+@use '@scss/media' as *;
+@use '@scss/variables' as *;
+
+.counter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    justify-self: start;
+    align-self: flex-end;
+    gap: 12px;
+    border: 1px solid #eeeff2;
+    border-radius: 32px;
+    padding: 5px 11px;
+
+    &__minus {
+        width: 14px;
+        height: 14px;
+        line-height: 14px;
+    }
+
+    &__number {
+        min-width: 14px;
+        text-align: center;
+    }
+
+    &__plus {
+        width: 14px;
+        height: 14px;
+        line-height: 14px;
+    }
+}
