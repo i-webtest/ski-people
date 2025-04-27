@@ -1,0 +1,14 @@
+@use 'scss/fonts';
+@use 'scss/base';
+@use 'scss/modules/header';
+@use 'scss/modules/catalog';
+@use 'scss/modules/breadcrumbs';
+@use 'scss/modules/goods';
+@use 'scss/modules/card';
+@use 'scss/modules/product';
+@use 'scss/modules/cart';
+@use 'scss/modules/counter';
+@use 'scss/modules/order';
+@use 'scss/modules/footer';
+
+@import 'normalize.css';

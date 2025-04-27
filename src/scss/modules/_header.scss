@@ -1,0 +1,137 @@
+@use '@scss/media' as *;
+@use '@scss/variables' as *;
+
+.header {
+    &__container {
+    }
+
+    &__wrapper {
+        display: grid;
+        grid-template-areas:
+            'logo navigation'
+            'search search';
+        gap: 16px;
+        border-bottom: 1px solid #eeeff2;
+        padding: 16px 0;
+
+        @include laptop {
+            grid-template-areas: 'logo search navigation';
+            align-items: center;
+        }
+    }
+
+    &__logo-link {
+        grid-area: logo;
+        display: block;
+        max-width: max-content;
+        border-radius: 4px;
+        outline-offset: 4px;
+        outline: 1px solid transparent;
+
+        &:focus-visible {
+            outline-color: #0044f0;
+        }
+    }
+
+    &__logo-image {
+        width: 106px;
+
+        @include tablet {
+            width: 130px;
+        }
+    }
+
+    &__search {
+        position: relative;
+        grid-area: search;
+        width: 100%;
+
+        @include laptop {
+            max-width: 408px;
+        }
+
+        @include desktop {
+            max-width: 514px;
+        }
+    }
+
+    &__search-input {
+        width: 100%;
+        background-color: #eeeff2;
+        border: 1px solid transparent;
+        border-radius: 32px;
+        outline: none;
+        padding: 12px 50px 12px 24px;
+
+        &:hover,
+        &:focus {
+            border-color: #dfe3eb;
+        }
+
+        &::placeholder {
+            color: #969eae;
+        }
+    }
+
+    &__search-button {
+        position: absolute;
+        top: 11px;
+        right: 24px;
+        border-radius: 4px;
+        outline-offset: 4px;
+        outline: 1px solid transparent;
+
+        &:focus-visible {
+            outline-color: #0044f0;
+        }
+    }
+
+    &__links-list {
+        grid-area: navigation;
+        justify-self: end;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+
+    &__link {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-end;
+        gap: 4px;
+        fill: #fff;
+        border-radius: 4px;
+        outline-offset: 4px;
+        outline: 1px solid transparent;
+
+        &:focus-visible {
+            outline-color: #0044f0;
+        }
+
+        @include tablet {
+            flex-direction: row;
+        }
+
+        &:hover,
+        &:active,
+        &:hover svg,
+        &:active svg {
+            color: #0044f0;
+            fill: #0044f0;
+        }
+    }
+
+    &__link-text {
+        display: none;
+
+        @include tablet {
+            display: block;
+        }
+    }
+
+    &__link-count {
+    }
+
+    &__link-icon {
+    }
+}

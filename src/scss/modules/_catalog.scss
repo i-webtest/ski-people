@@ -1,0 +1,63 @@
+@use '@scss/media' as *;
+
+.catalog {
+    overflow-x: hidden;
+    padding-top: 28px;
+
+    @include tablet {
+        padding-top: 32px;
+    }
+
+    @include laptop {
+        padding-top: 40px;
+    }
+
+    &__container {
+        padding: 0;
+    }
+
+    &__list {
+        display: flex;
+        gap: 4px;
+        overflow-x: auto;
+        scrollbar-width: none;
+        padding: 0 16px;
+
+        @include tablet {
+            padding: 0 29px;
+        }
+
+        @include laptop {
+            padding: 0 43px;
+        }
+    }
+
+    &__item {
+    }
+
+    &__link {
+        display: block;
+        color: #969eae;
+        background-color: #eeeff2;
+        border: 1px solid transparent;
+        border-radius: 32px;
+        outline: none;
+        padding: 11px 14px 13px;
+
+        &:hover,
+        &:focus-visible {
+            color: #0044f0;
+            border-color: #0044f0;
+        }
+
+        &-active {
+            color: #fff;
+            background-color: #0044f0;
+
+            &:hover,
+            &:focus-visible {
+                color: #fff;
+            }
+        }
+    }
+}

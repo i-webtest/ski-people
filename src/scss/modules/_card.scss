@@ -1,0 +1,116 @@
+@use '@scss/media' as *;
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    &__link {
+        display: block;
+        margin-bottom: 12px;
+        border-radius: 16px;
+        outline-offset: 4px;
+        outline: 1px solid transparent;
+
+        @include tablet {
+            margin-bottom: 16px;
+        }
+
+        &:focus-visible {
+            outline-color: #0044f0;
+        }
+    }
+
+    &__image {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 16px;
+    }
+
+    &__like-button {
+        position: absolute;
+        z-index: 1;
+        top: 12px;
+        right: 12px;
+
+        svg {
+            fill: white;
+        }
+
+        &:focus-visible {
+            border-radius: 4px;
+            outline-offset: 4px;
+            outline: 1px solid transparent;
+
+            &:focus-visible {
+                outline-color: #0044f0;
+            }
+        }
+
+        &:hover,
+        &:active {
+            svg {
+                fill: #0044f0;
+                color: #0044f0;
+            }
+        }
+    }
+
+    &__info {
+        flex-grow: 1;
+        margin-bottom: 12px;
+
+        @include tablet {
+            margin-bottom: 37px;
+        }
+
+        @include laptop {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 5px;
+            margin-bottom: 18px;
+        }
+    }
+
+    &__title {
+        font-weight: 400;
+        font-size: 12px;
+        margin-bottom: 18px;
+
+        @include tablet {
+            font-size: 16px;
+        }
+
+        @include laptop {
+            margin-bottom: 0;
+        }
+    }
+
+    &__price {
+        font-size: 16px;
+    }
+
+    &__button {
+        width: 100%;
+        color: #0044f0;
+        border: 1px solid #0044f0;
+        border-radius: 32px;
+        outline: none;
+        padding: 12px 24px;
+
+        &:hover {
+            color: #fff;
+            background-color: #0044f0;
+        }
+
+        &:focus-visible {
+            border-color: #042f9c;
+        }
+
+        &:default {
+            opacity: 0.2;
+        }
+    }
+}

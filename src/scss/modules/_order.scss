@@ -1,0 +1,138 @@
+@use '@scss/media' as *;
+@use '@scss/variables' as *;
+
+.order {
+    padding: 32px 0 60px;
+
+    @include tablet {
+        padding: 60px 0 80px;
+    }
+
+    @include laptop {
+        padding: 60px 0 100px;
+    }
+
+    &__container {
+        border: 1px solid #eeeff2;
+        border-radius: 16px;
+
+        @include tablet {
+            border: none;
+        }
+    }
+
+    &__wrapper {
+        padding: 24px 0;
+
+        @include tablet {
+            border: 1px solid #eeeff2;
+            border-radius: 16px;
+            padding: 60px 0;
+        }
+
+        @include laptop {
+            max-width: 726px;
+            margin: 0 auto;
+        }
+
+        @include desktop {
+            max-width: 832px;
+        }
+    }
+
+    &__wrapper-wrap {
+        @include tablet {
+            max-width: 408px;
+            margin: 0 auto;
+        }
+    }
+
+    &__header {
+        margin-bottom: 8px;
+
+        @include tablet {
+            margin-bottom: 12px;
+        }
+    }
+
+    &__title {
+        font-weight: 400;
+        font-size: 16px;
+        margin-bottom: 8px;
+
+        @include tablet {
+            font-size: 20px;
+            margin-bottom: 0;
+        }
+    }
+
+    &__total {
+        font-size: 16px;
+
+        @include tablet {
+            font-size: 20px;
+        }
+    }
+
+    &__number {
+        display: inline-block;
+        background-color: #eeeff2;
+        border-radius: 32px;
+        padding: 4px 8px;
+        margin-bottom: 20px;
+
+        @include tablet {
+            margin-bottom: 24px;
+        }
+    }
+
+    &__info {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+
+    &__table {
+        width: 100%;
+        margin-bottom: 24px;
+    }
+
+    &__table-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 0;
+        border-bottom: 1px solid #eeeff2;
+
+        &:first-child {
+            padding-top: 0;
+        }
+    }
+
+    &__table-item {
+        &:first-child {
+            color: #969eae;
+        }
+    }
+
+    &__link {
+        display: inline-block;
+        width: 100%;
+        color: #fff;
+        text-align: center;
+        background-color: #0044f0;
+        border: 1px solid #0044f0;
+        border-radius: 32px;
+        padding: 12px 24px;
+
+        &:hover {
+            background-color: #0945de;
+        }
+
+        &:focus {
+            border-color: #042f9c;
+        }
+
+        &:default {
+            opacity: 0.2;
+        }
+    }
+}
